@@ -14,46 +14,48 @@ interface TeamMember {
   isLeader?: boolean
 }
 
+const assetUrl = (path: string) => `/${path}`
+
 const teamMembers: TeamMember[] = [
   // 1. دكتور المادة
   {
     name: 'د. منى الزناتي',
     role: 'أستاذ مقرر الإسعافات الأولية',
-    image: '/team/د. منى الزناتي - أستاذ مقرر الأسعافات الأولية.jpeg',
+    image: assetUrl('team/د. منى الزناتي - أستاذ مقرر الأسعافات الأولية.jpeg'),
     isProfessor: true,
   },
   // 2. ليدر التيم
   {
     name: 'يوسف عبداللا ربيع',
     role: 'ليدر الفريق',
-    image: '/team/يوسف عبداللا ربيع - ليدر.jpg',
+    image: assetUrl('team/يوسف عبداللا ربيع - ليدر.jpg'),
     isLeader: true,
   },
   // 3. باقي الأعضاء
   {
     name: 'أحمد رامي فريد',
     role: 'عضو الفريق',
-    image: '/team/أحمد رامي فريد - عضو.jpg',
+    image: assetUrl('team/أحمد رامي فريد - عضو.jpg'),
   },
   {
     name: 'عبدالرحمن حمدي محمود',
     role: 'عضو الفريق',
-    image: '/team/عبدالرحمن حمدي محمود - عضو.jpeg',
+    image: assetUrl('team/عبدالرحمن حمدي محمود - عضو.jpeg'),
   },
   {
     name: 'علياء عاصم عبدالسميع',
     role: 'عضو الفريق',
-    image: '/team/علياء عاصم عبدالسميع.jpg',
+    image: assetUrl('team/علياء عاصم عبدالسميع.jpg'),
   },
   {
     name: 'مريم محمد علي محمد مبارك',
     role: 'عضو الفريق',
-    image: '/team/مريم محمد علي محمد مبارك - عضو.jpg',
+    image: assetUrl('team/مريم محمد علي محمد مبارك - عضو.jpg'),
   },
   {
     name: 'ملك فرج سعيد',
     role: 'عضو الفريق',
-    image: '/team/ملك فرج سعيد - عضو.jpeg',
+    image: assetUrl('team/ملك فرج سعيد - عضو.jpeg'),
   },
 ]
 
@@ -157,7 +159,7 @@ export function TeamSection() {
             {/* لوجو الكلية */}
             <div className="flex-shrink-0">
               <img
-                src="/logos/faculty - logo.png"
+                src={assetUrl('logos/faculty - logo.png')}
                 alt="شعار كلية التربية النوعية"
                 className="h-20 w-auto object-contain"
                 loading="lazy"
@@ -180,7 +182,7 @@ export function TeamSection() {
             {/* لوجو القسم */}
             <div className="flex-shrink-0">
               <img
-                src="/logos/department - logo.png"
+                src={assetUrl('logos/department - logo.png')}
                 alt="شعار قسم تكنولوجيا التعليم"
                 className="h-20 w-auto object-contain"
                 loading="lazy"
@@ -239,4 +241,3 @@ export function TeamSection() {
     </section>
   )
 }
-
